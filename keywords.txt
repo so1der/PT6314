@@ -1,0 +1,14 @@
+PT6314	KEYWORD1	PT6314
+
+begin	KEYWORD2
+clear	KEYWORD2
+home	KEYWORD2
+print	KEYWORD2
+setCursor	KEYWORD2
+cursor	KEYWORD2
+noCursor	KEYWORD2
+blink	KEYWORD2
+noBlink	KEYWORD2
+display	KEYWORD2
+noDisplay	KEYWORD2
+createChar	KEYWORD2
