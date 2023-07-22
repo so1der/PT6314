@@ -1,10 +1,10 @@
 #include <PT6314.h>
 
-#define SER 11
-#define ST 8
-#define CLK 13
+#define SI 11
+#define STB 8
+#define SCK 13
 
-PT6314 vfd(CLK, ST, SER);
+PT6314 vfd(SCK, STB, SI);
 
 void setup()
 {
