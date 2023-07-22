@@ -8,9 +8,6 @@ PT6314 vfd(CLK, ST, SER);
 
 void setup()
 {
-  pinMode(SER, OUTPUT);
-  pinMode(ST, OUTPUT);
-  pinMode(CLK, OUTPUT);
   vfd.begin(20, 2, 0);
   vfd.home();
   vfd.print("Hello World");
