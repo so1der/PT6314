@@ -13,6 +13,10 @@ void PT6314::init(uint8_t sck, uint8_t stb, uint8_t si)
     _stb_pin = stb;
     _si_pin = si;
 
+    pinMode(_sck_pin, OUTPUT);
+    pinMode(_stb_pin, OUTPUT);
+    pinMode(_si_pin, OUTPUT);
+
     _displayfunction = VFD_FUNCTIONSET | VFD_8BITMODE | VFD_1LINE | VFD_BRT_100;
 }
 
