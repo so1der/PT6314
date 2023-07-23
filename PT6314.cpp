@@ -31,15 +31,15 @@ void PT6314::begin(uint8_t cols, uint8_t rows, uint8_t brt)
 
     switch (_brt)
     {
-    case 0:
-        break;
-    case 1:
+    case 100:
+        _displayfunction |= VFD_BRT_100;
+    case 75:
         _displayfunction |= VFD_BRT_75;
         break;
-    case 2:
+    case 50:
         _displayfunction |= VFD_BRT_50;
         break;
-    case 3:
+    case 25:
         _displayfunction |= VFD_BRT_25;
         break;
     }

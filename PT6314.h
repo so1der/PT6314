@@ -53,7 +53,7 @@ class PT6314 : public Print
 public:
     PT6314(uint8_t sck, uint8_t stb, uint8_t si);
     void init(uint8_t sck, uint8_t stb, uint8_t si);
-    void begin(uint8_t cols, uint8_t rows, uint8_t brt = 0);
+    void begin(uint8_t cols, uint8_t rows, uint8_t brt = 100);
 
     void clear();
     void home();
