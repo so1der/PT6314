@@ -8,7 +8,7 @@ PT6314 vfd(SCK, STB, SI);
 
 void setup()
 {
-  vfd.begin(20, 2, 0);
+  vfd.begin(20, 2, 100);
   vfd.home();
   vfd.print("Hello World");
 }
