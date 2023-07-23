@@ -9,3 +9,4 @@ To control PT6314 via Serial Interface, connection should be as followed:
 
 PT6314 also can be controlled via parallel protocol (i80/M68), in this case You can use [LiquidCrystal](https://github.com/arduino-libraries/LiquidCrystal) library (main features will work, but for some things library should be modificated)
 
+I wrote this library following the example of the library [LiquidCrystal](https://github.com/arduino-libraries/LiquidCrystal), so usage of it is pretty similar - begin(), print(), etc. You can see more in the "Examples" folder.
