@@ -20,28 +20,12 @@ void PT6314::init(uint8_t sck, uint8_t stb, uint8_t si)
     _displayfunction = VFD_FUNCTIONSET | VFD_8BITMODE | VFD_1LINE | VFD_BRT_100;
 }
 
-void PT6314::begin(uint8_t cols, uint8_t rows, uint8_t brt)
+void PT6314::begin(uint8_t cols, uint8_t rows)
 {
-    _brt = brt;
     _numlines = rows;
     if (_numlines > 1)
     {
         _displayfunction |= VFD_2LINE;
-    }
-
-    switch (_brt)
-    {
-    case 100:
-        _displayfunction |= VFD_BRT_100;
-    case 75:
-        _displayfunction |= VFD_BRT_75;
-        break;
-    case 50:
-        _displayfunction |= VFD_BRT_50;
-        break;
-    case 25:
-        _displayfunction |= VFD_BRT_25;
-        break;
     }
 
     _displaycontrol = VFD_DISPLAYCONTROL | VFD_DISPLAYON | VFD_CURSOROFF | VFD_BLINKOFF;
@@ -138,6 +122,26 @@ void PT6314::setCursor(uint8_t col, uint8_t row)
         position += 0x40;
     }
     send(COMMAND, VFD_SETDDRAMADDR | position);
+}
+
+void PT6314::setBrightness(uint8_t brt)
+{
+    switch (brt)
+    {
+    case 100:
+        _displayfunction |= VFD_BRT_100;
+        break;
+    case 75:
+        _displayfunction |= VFD_BRT_75;
+        break;
+    case 50:
+        _displayfunction |= VFD_BRT_50;
+        break;
+    case 25:
+        _displayfunction |= VFD_BRT_25;
+        break;
+    }
+    send(COMMAND, _displayfunction);
 }
 
 inline size_t PT6314::write(uint8_t value)

@@ -53,7 +53,7 @@ class PT6314 : public Print
 public:
     PT6314(uint8_t sck, uint8_t stb, uint8_t si);
     void init(uint8_t sck, uint8_t stb, uint8_t si);
-    void begin(uint8_t cols, uint8_t rows, uint8_t brt = 100);
+    void begin(uint8_t cols, uint8_t rows);
 
     void clear();
     void home();
@@ -65,9 +65,9 @@ public:
     void noCursor();
     void cursor();
     void setCursor(uint8_t, uint8_t);
+    void setBrightness(uint8_t brt);
     void createChar(uint8_t, uint8_t[]);
 
-    void sendtoVFD(uint8_t);
     virtual size_t write(uint8_t);
 
     using Print::write;
