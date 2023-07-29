@@ -158,5 +158,4 @@ void PT6314::createChar(uint8_t location, uint8_t charmap[])
     {
         send(DATA, charmap[i]);
     }
-    home();
 }
