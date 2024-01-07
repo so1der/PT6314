@@ -79,7 +79,6 @@ private:
     uint8_t _sck_pin; // Clock pin
     uint8_t _stb_pin; // Strobe pin
     uint8_t _si_pin;  // Serial Input pin
-    uint8_t _brt;     // Brightness (0-3)
 
     uint8_t _displayfunction;
     uint8_t _displaycontrol;
